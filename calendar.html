@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calendar</title>
+<link type="text/css" rel="stylesheet" href="calendar.css">
+<script src="jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="calendar.js"></script>
+</head>
+<body id="body">
+    <div id ='calendar'>
+<div id="calendarcontainer">
+<div id="triangleright"></div>
+<div id="triangleleft"></div>
+<button id="editmodebutton">create event</button>
+    <button id="editeventbutton">edit event</button>
+    <div id="dayofweek"><p>S</p><p>M</p><p>T</p><p>W</p><p>T</p><p>F</p><p>S</p></div>
+<div id="calendar-header">
+<span id="calendar-month-year"></span>
+</div>
+<div id="calendar-dates">
+</div>
+</div>
+<div id="calendarevent">
+    <input type="text"id="createcalendartitle" placeholder="Event Title"></input>
+    <br>
+    <div id="eventradiobuttons">
+    <input type="radio" name="eventkind" id="duedate" class="eventkind">duedate</input>
+    <input type="radio" name="eventkind" id="event" class="eventkind">event</input>
+    <input type="radio" name="eventkind" id="meeting" class="eventkind">meeting</input>
+    </div>
+<br>
+    <button id="chosedate">choose date</button>
+<br>
+    <textarea id="inputevent" placeholder="Description (optional)"></textarea>
+<br>
+    <button id="submitevent">submit event</button>
+    <button id="cancelcreateevent">cancel</button>
+</div>
+<div id="calendardateinfo">
+</div>
+</div>
+</body>
+</html>

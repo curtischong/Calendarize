@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>cal years</title>
+<style>
+div.float{
+height:130px;
+font-family:Courier New;
+float:left;
+border:1px solid #000;
+}
+div.month{
+text-align:center;
+width:100%;
+}
+</style>
+<script>
+
+window.onload = init;
+
+var start_year = 2015;
+var end_year = 2016;
+
+function init(){
+document.getElementById('btn1').onclick = gencal;
+}
+
+function gencal() {
+var date = new Date(start_year, 0, 1);//2013, 0=january, 1
+var months = ['JANUARY','FEBRUARY','MARCH','APRIL','MAY','JUNE','JULY','AUGUST','SEPTEMBER','OCTOBER','NOVEMBER','DECEMBER'];
+var daysinmonths = [31,28,31, 30,31,30, 31,31,30, 31,30,31];
+var done = false;
+var str = '';
+var day = 1;
+var year = start_year;
+var month = 0;
+var pos = 0;
+
+while (!done) {
+
+leap_year_check(year,daysinmonths);// this function adjusts the feb value of the daysinmonth array
+
+str += '<div class="float"><div class="month">'+ months[month] +' '+ year +'</div>';
+
+pos = 1;
+while( date.getDay() != pos-1 ){ //align first day of month
+str += '&nbsp;&nbsp; ';
+pos++;
+}
+
+day = 1;
+while (day <= daysinmonths[month]){
+if (day<10){
+ str += '&nbsp;'+ day +' ';
+}else{
+ str += day + ' ';
+}
+ if (pos%7==0){
+  str += '<br/>';
+ }
+day++;
+pos++;
+}
+str += '</div>';
+//alert('eom');
+month++;
+day=1; 
+date = new Date(year, month, 1);
+
+if (month > 11) {
+  month = 0;
+  year++;
+}
+if (year > end_year){
+  done = true;
+}
+}
+document.getElementById('out1').innerHTML = str;
+}
+
+function leap_year_check(year,array){
+var leapyears = [2016,2020,2024,2028,2032];
+array[1] = 28;//feb normally has 28 days
+for(var i=0 ; i<leapyears.length ; i++){
+if(year==leapyears[i]){
+array[1] = 29;//feb gets extra day
+}
+}
+}
+
+</script>
+</head>
+
+<body>
+
+<input type="button" id="btn1" value="Run"/>
+
+<div id="out1">
+</div>
+
+</body>
+</html>

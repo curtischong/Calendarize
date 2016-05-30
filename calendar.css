@@ -1,0 +1,164 @@
+#calendarcontainer{
+  padding: 10px;
+  width: 210px;
+  height: 240px;
+  text-align: center;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: Arial;
+  background-image: linear-gradient(#fff, #d3d3d3);
+}
+#calendar-container>div{
+  padding: 0;
+  margin-bottom: 10px;
+}
+#calendar-month-year{
+    position: relative;
+    bottom: 35px;
+    margin: 5px;
+}
+#calendar-dates>table>tr>td{
+  padding: 5px;
+} 
+#calendar-dates>table>tbody>tr>td{
+  padding: 5px;
+}
+#dayofweek>p{
+    position:relative;
+    width: 250px;
+    top: 10px;
+    display: inline;
+    padding: 9px;
+}
+#triangleleft {
+	width: 0;
+	height: 0;
+	border-top: 5px solid transparent;
+	border-right: 10px solid red;
+	border-bottom: 5px solid transparent;
+	position: absolute;
+}
+#triangleright {
+	width: 0;
+	height: 0;
+	border-top: 5px solid transparent;
+	border-left: 10px solid red;
+	border-bottom: 5px solid transparent;
+	position: absolute;
+	left: 50px;
+}
+.dayclickedon_duedate{
+    background-color: crimson;   
+}
+.dayclickedon_event{
+    background-color: chartreuse;
+}
+.dayclickedon_meeting{
+    background-color: blue;
+}
+#calendarevent{
+position: relative;
+    top: 10px;
+    height: 320px;
+    width:350px;
+    background-color: aqua;
+} 
+#editmodebutton{
+position: relative;
+top: 10px;
+left: 200px;
+}
+#editeventbutton{
+position: relative;
+top: 30px;
+left: 110px;
+}
+#createcalendartitle{
+ height:20px;
+width:300px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    text-align: center;
+}
+#eventradiobuttons{
+    position: relative;
+    top:20px;
+    left:50px;
+    display: inline;
+}
+.eventkind{
+ display: inline;   
+}
+#inputevent{
+ position: relative;
+    top:20px;
+    left:20px;
+    resize: none;
+    height: 160px;
+    width: 300px;
+}
+#submitevent{
+    position: relative;
+    height: 25px;
+    width:300px;
+    top: 20px;
+    left: 20px;
+}
+#chosedate{
+ position: relative;
+    height: 20px;
+    width: 300px;
+    top: 20px;
+    left: 20px;
+}
+#cancelcreateevent{
+ position: relative;
+    top: 20px;
+    left: 20px;
+    height:20px;
+    width:300px;
+}
+.event_meeting{
+    background-color: cornflowerblue;
+}
+.event_event{
+    background-color: green;
+}
+.event_duedate{
+ background-color: red;   
+}
+.calendardate{
+ position: relative;
+    z-index: 1;
+    bottom: 50px;
+}
+#calendardateinfo{
+ position: relative;
+    top: 200px;
+    width: 300px;
+    height: 200px;
+    background-color: bisque;
+    text-align: center;
+    word-wrap: break-word;
+    overflow: auto;
+}
+#hoverinfotitle{
+ font-weight: bold;
+}
+#hoverinfodescription{
+ text-align: left;   
+}
+.dayselected{
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+
+
+
+
+
+
